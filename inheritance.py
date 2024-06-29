@@ -1,30 +1,32 @@
+# Define a class that will comprise different objects
 class Vehicle:
     def __init__(self, brand, model, year):
         self.brand = brand
         self.model = model
         self.year = year
-        
+
     def start_engine(self):
         return f"The engine of the {self.model} is starting."
-    
+
     def stop_engine(self):
         return f"The engine of the {self.model} is stopping."
     
     def display_info(self):
         return f"Brand: {self.brand}, Model: {self.model}, Year: {self.year}"
     
+# Definition of another vehicle that inherits the characteristics of the class 'Vehicle'    
 class Car(Vehicle):
     def __init__(self, brand, model, year, num_doors):
-        super().__init__(brand, model, year) # Inheriting from Vehicle
+        super().__init__(brand, model, year) # Inheriting from 'Vehicle' class
         self.num_doors = num_doors
-
+    
     def open_trunk(self):
         return f"The trunk of the {self.model} is open."
     
-    # Overriding display_info method
+    # Overriding the display_info methdo to add the 'num_doors' attribute
     def display_info(self):
         return f"Brand: {self.brand}, Model: {self.model}, Year: {self.year}, Doors: {self.num_doors}"
-    
+
 class Bicycle(Vehicle):
     def __init__(self, brand, model, year, type_bike):
         super().__init__(brand, model, year) # Inherited from Vehicle
@@ -50,5 +52,3 @@ print(my_bicycle.display_info())
 print(my_car.open_trunk())
 print(my_bicycle.ring_bell())
 
-
-    

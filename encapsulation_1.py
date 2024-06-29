@@ -1,25 +1,26 @@
 class Person:
     def __init__(self, name, age, email):
         self.name = name
-        self.__age = age # Private attribute
-        self.__email = email # Private attribute
+        self.__age = age # Double underscore for Private attribute
+        self.__email = email # Double underscore for Private attribute
     
-    # Getter for age
+    # Getter for age (function created to change and fetch a private attribute)
     def get_age(self):
         return self.__age
     
-    # Setter for age
+    # Setter for age (function created to change and fetch a private attribute)
     def set_age(self, age):
         self.__age = age
 
-    # Getter for email
+    # Getter for email (function created to change and fetch a private attribute)
     def get_email(self):
         return self.__email
     
-    # Setter for email
+    # Setter for email (function created to change and fetch a private attribute)
     def set_email(self, email):
         self.__email = email
     
+    # Show all info, including encapsulated info
     def display_info(self):
         return f"Name: {self.name}, Age: {self.__age}, Email: {self.__email}"
     
